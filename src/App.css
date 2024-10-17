@@ -1,0 +1,156 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHNjZW5lcnl8ZW58MHx8fHwxNjM0NzAzMDk3&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Todo Container */
+.todo-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  width: 420px;
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeInSlideUp 1.2s ease-out;
+  -webkit-backdrop-filter: blur(15px); /* Light blurry effect for Safari */
+  backdrop-filter: blur(15px); /* Light blurry effect */
+}
+
+/* Title */
+h2 {
+  font-size: 30px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+}
+
+/* Input field */
+input[type="text"] {
+  width: 85%;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Add Task Button */
+button.add-btn {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+button.add-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Todo List Items */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ecf0f1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  animation: zoomIn 0.9s ease-in-out;
+}
+
+/* New Animations */
+@keyframes fadeInSlideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+      transform: scale(0.7);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Complete and Remove buttons */
+button.complete-btn,
+button.remove-btn {
+  padding: 10px 20px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+/* Complete button */
+button.complete-btn {
+  background-color: #27ae60;
+  color: #fff;
+  margin-right: 20px; /* Space between buttons */
+  box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.2); /* Green shadow */
+}
+
+button.complete-btn:hover {
+  background-color: #2ecc71;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 255, 0, 0.3);
+}
+
+/* Remove button */
+button.remove-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.2); /* Red shadow */
+}
+
+button.remove-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Built By Name */
+.built-by {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #555;
+  letter-spacing: 1px;
+  animation: fadeIn 1.5s ease-in-out;
+  font-weight: bold;
+}
+.built-by h4 {
+  display: inline; /* To keep it in the same line */
+  color: lightcoral; /* Light red */
+  /* For blue, use color: lightblue; */
+  font-weight: bold;
+}
